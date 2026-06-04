@@ -1,0 +1,49 @@
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      
+      <!-- Left: Logo Area -->
+      <div class="flex-shrink-0 flex items-center gap-2">
+        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          Angular App
+        </span>
+      </div>
+
+      <!-- Center: Navigation Links -->
+      <nav class="hidden md:flex space-x-8">
+        <a routerLink="/" routerLinkActive="text-blue-600 font-semibold" class="cursor-pointer text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">
+          Home
+        </a>
+        <a routerLink="/features" routerLinkActive="text-blue-600 font-semibold" class="cursor-pointer text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">
+          Features
+        </a>
+        <a routerLink="/pricing" routerLinkActive="text-blue-600 font-semibold" class="cursor-pointer text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">
+          Pricing
+        </a>
+        <a (click)="getDataFromAPI()" class="cursor-pointer text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">
+          Get Users
+        </a>
+      </nav>
+
+      <!-- Right: Action Buttons -->
+      <div class="hidden md:flex items-center gap-4">
+        <button class="text-gray-600 hover:text-gray-900 text-sm font-medium">
+          Sign In
+        </button>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors shadow-sm">
+          Get Started
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button (Hamburger) -->
+      <div class="flex items-center md:hidden">
+        <button class="text-gray-600 hover:text-gray-900 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>

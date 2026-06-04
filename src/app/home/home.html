@@ -1,0 +1,21 @@
+<div class="home-wrapper p-4 bg-gray-200">
+    @if (users()) {
+    <div class="grid grid-cols-3 p-4 gap-4">
+        @for (user of users(); track user.id;){
+        <div class="profile-card border border-gray-300 bg-white bg-gray-200 hover:shadow-lg p-4 rounded-lg">
+            <div class="profile-info">
+                <p><strong>Name: </strong>{{ user.firstName }} {{ user.lastName }}</p>
+                <p class="email"><strong>Email: </strong>{{ user.email }}</p>
+                <p class="company"><strong>Company Name: </strong>{{ user.company?.name }}</p>
+            </div>
+            <div class="profile-actions flex gap-2 mt-2 border-t py-2">
+                <button class="border bg-blue-500 px-4 py-2 cursor-pointer text-white font-medium">Edit</button>
+                <button class="border bg-red-500 px-4 py-2 cursor-pointer text-white font-medium" (click)="deleteUser(user.id)">Delete</button>
+            </div>
+        </div>
+        }
+    </div>
+    } @else {
+    <p class="no-data">No User Profile Found</p>
+    }
+</div>
